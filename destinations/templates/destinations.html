@@ -7,10 +7,10 @@
             {% for destination in destinations %}
                 <div class="col">
 
-                      <div class="card">
+                      <div class="card" style="width:8rem; m-5" >
                         <img class="card-img-top" src="{{destination.image_url}}" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">{{destination.small_title}}</h5>
+                          <p class="card-title">{{destination.small_title}}</p>
 <!--                          <p class="card-text"></p>-->
                         </div>
                         <div class="card-footer">
@@ -21,16 +21,5 @@
                 </div>
              {% endfor %}
         </div>
+
 {% endblock %}
-
-
-
-
-<!--<div class="card" style="width: 18rem;">-->
-<!--                    <img class="card-img-top" src="{{destination.image_url}}" alt="Card image cap">-->
-<!--                    <div class="card-body">-->
-<!--                      <h5 class="card-title">{{destination.small_title}}</h5>-->
-<!--                      <p class="card-text">{{destination.location}}</p>-->
-<!--                      -->
-<!--                    </div>-->
-<!--                  </div>-->

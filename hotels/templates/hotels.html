@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+ <h1>Hotels and Restaurants</h1>
+
+        <div class="row">
+            {% for hotel in hotels %}
+                <div class="col">
+
+                      <div class="card">
+                        <img class="card-img-top" src="{{hotel.image_url}}" style="height:20.75rem" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-title">{{hotel.name}}</p>
+<!--                          <p class="card-text"></p>-->
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">{{hotel.location}}</small>
+                        </div>
+                      </div>
+
+                </div>
+             {% endfor %}
+        </div>
+
+{% endblock %}
