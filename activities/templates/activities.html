@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <h1>Activities</h1>
+
+        <div class="row">
+            {% for activity in activities %}
+                <div class="col">
+
+                      <div class="card" style="width:15rem; m-5" >
+                        <img class="card-img-top" src="{{activity.image_url}}" style="height: 18rem" alt="Card image cap">
+                        <div class="card-body">
+                          <p class="card-title">{{activity.small_title}}</p>
+<!--                          <p class="card-text"></p>-->
+                        </div>
+                      </div>
+
+                </div>
+             {% endfor %}
+        </div>
+
+{% endblock %}
