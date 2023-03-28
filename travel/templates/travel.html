@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>Travel Tips and Advice </h1>
+
+        <div class="row">
+
+          {% for travel in travel_tips %}
+
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body" style="width:18rem">
+               <img class="card-img-top" src="{{travel.image_url}}" style="height:20.75rem" alt="Card image cap">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title" style="font-weight:900 ; margin-bottom: 3rem">{{travel.title}}</h4>
+                <p class="card-text">{{travel.description}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+
+{% endblock %}
