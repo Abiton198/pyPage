@@ -1,25 +1,24 @@
 {% extends 'base.html'%}
 
-{% block content %}
-    <h1>Popular Destinations</h1>
+    {% block content %}
+        <h1>Popular Destinations</h1>
+            <div class="row">
+                {% for destination in destinations %}
+                    <div class="col">
 
-        <div class="row">
-            {% for destination in destinations %}
-                <div class="col">
+                          <div class="card" style="width:8rem; m-5" >
+                            <img class="card-img-top" src="{{destination.image_url}}" alt="Card image cap">
+                            <div class="card-body">
+                              <p class="card-title">{{destination.small_title}}</p>
+    <!--                          <p class="card-text"></p>-->
+                            </div>
+                            <div class="card-footer">
+                              <small class="text-muted">{{destination.location}}</small>
+                            </div>
+                          </div>
 
-                      <div class="card" style="width:8rem; m-5" >
-                        <img class="card-img-top" src="{{destination.image_url}}" alt="Card image cap">
-                        <div class="card-body">
-                          <p class="card-title">{{destination.small_title}}</p>
-<!--                          <p class="card-text"></p>-->
-                        </div>
-                        <div class="card-footer">
-                          <small class="text-muted">{{destination.location}}</small>
-                        </div>
-                      </div>
+                    </div>
+                 {% endfor %}
+            </div>
 
-                </div>
-             {% endfor %}
-        </div>
-
-{% endblock %}
+    {% endblock %}
